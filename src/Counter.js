@@ -16,9 +16,9 @@ class Counter extends React.Component {
         return(
             <div>
                 <h1>{this.props.value}</h1>
-                <button  onClick={this._incrementValue}>+</button>
-                <button  onClick={this._subValue}>-</button>
-                {/* <button  onClick={this._setValue}>*</button> */}
+                <button  onClick={this.props.addHandler}>+</button>
+                <button  onClick={this.props.subtractHandler}>-</button>
+                <button  onClick={this._resetValue}>*</button>
             </div>
         );
     }
@@ -31,18 +31,18 @@ class Counter extends React.Component {
         const newVal = this.props.value + this.props.changeBy;
         this.props.clickHandler(this.props.index, newVal);
     }
-    _subValue= () => {
+    _decrementValue= () => {
         // this.setState({
         //     value: this.state.value - this.props.changeBy
         // });
         const newVal = this.props.value - this.props.changeBy;
         this.props.clickHandler(this.props.index, newVal);
     }
-    _setValue= () => {
+    _resetValue= () => {
         // this.setState({
         //     value: this.props.initialValue
         // });
-        this.props.clickHandler(this.props.index, this.state.initialValue);
+        this.props.resetHandler(this.props.index, this.state.initialValue);
     }
 }
 
