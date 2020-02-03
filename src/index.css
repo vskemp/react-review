@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body {
+  background: lightyellow;
+}
+
+.card {
+  border: 3px dotted lavender;
+  border-radius: 15px;
+  padding: 8px 14px;
+}
+
+
+/* when card is directly adjactnt to the other */
+.card + .card {
+  margin-top:20px;
+}
+
+.greet {
+  color: purple;
+}
+
+.greet h1 {
+  font-family: fantasy;
+}
